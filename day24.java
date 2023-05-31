@@ -1,0 +1,24 @@
+
+import java.util.*;
+class Solution {
+    public int singleNumber(int[] nums) {
+        Arrays.sort(nums);
+        int a=nums.length;
+        if(a==1)
+        {
+            return nums[0];
+        }
+        else{
+            for(int i=0; i<a-1;i=i+2)
+            {
+                if(nums[i]!=nums[i+1])
+                {
+                    return nums[i];
+                }
+            }
+        }
+             return nums[nums.length-1];
+        
+        
+    }
+}
